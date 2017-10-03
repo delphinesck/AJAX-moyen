@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Festivals en France</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+</head>
+<body>
+    <div id="map"></div>
+    <div id="infos">
+        <h1>Festivals de musique<br />en France</h1>
+
+        <div id="sidebar_box">
+            <h2>Ajouter un nouveau festival</h2>
+            <form id="form_newfestival">
+                <label>Nom du festival</label>
+                <input type="text" id="nom"><br /><br />
+                <label>Localisation</label>
+                <input type="text" id="latitude">
+                <input type="text" id="longitude"><br /><br />
+                <label>Date de début</label>
+                <input type="text" id="date_debut"><br /><br />
+                <label>Date de fin</label>
+                <input type="text" id="date_fin"><br /><br />
+                <label>Genres musicaux</label><br />
+                <label><input type="checkbox" value="1" class="genres" id="pop"> Pop</label>
+                <label><input type="checkbox" value="2" class="genres" id="rock"> Rock</label>
+                <label><input type="checkbox" value="3" class="genres" id="metal"> Métal</label>
+                <label><input type="checkbox" value="4" class="genres" id="rnb"> R&B</label>
+                <label><input type="checkbox" value="5" class="genres" id="rap"> Rap</label>
+                <label><input type="checkbox" value="6" class="genres" id="electro"> Electro</label>
+                <label><input type="checkbox" value="7" class="genres" id="jazz"> Jazz</label>
+                <br /><br />
+                <label>Logo</label>
+                <input type="text" id="logo"><br /><br />
+                <input type="submit" value="Ajouter">
+            </form>
+        </div>
+
+        <div id="sidebar_box">
+            <h2>Chercher un festival</h2>
+            <form id="form_search">
+                <label>Nom du festival</label>
+                <input type="text" id="select_nom"><br /><br />
+                <label>Date de début</label>
+                <input type="text" id="select_debut"><br /><br />
+                <label>Date de fin</label>
+                <input type="text" id="select_fin"><br /><br />
+                <label>Genres musicaux</label><br />
+                <label><input type="checkbox" value="1" class="select_genres" id="pop"> Pop</label>
+                <label><input type="checkbox" value="2" class="select_genres" id="rock"> Rock</label>
+                <label><input type="checkbox" value="3" class="select_genres" id="metal"> Métal</label>
+                <label><input type="checkbox" value="4" class="select_genres" id="rnb"> R&B</label>
+                <label><input type="checkbox" value="5" class="select_genres" id="rap"> Rap</label>
+                <label><input type="checkbox" value="6" class="select_genres" id="electro"> Electro</label>
+                <label><input type="checkbox" value="7" class="select_genres" id="jazz"> Jazz</label>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="class/Festival.js"></script>
+    <script src="class/App.js"></script>
+    <script src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVRmJQEeLKbtgMefQkYT-rpQlVfme3lIU&callback=app.initMap" async defer></script>
+   
+</body>
+</html>

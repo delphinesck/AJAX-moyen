@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+}
+
+#map {
+    width: 70%;
+    background-color: black;
+}
+
+#infos {
+    width: 30%;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto-regular', cursive;
+    padding: 25px;
+    background-image: url('images/bg.jpg');
+}
+
+#sidebar_box {
+    background-color: white;
+    color: black;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Megrim', cursive;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto-regular', cursive;
+    padding-bottom: 15px;
+}
